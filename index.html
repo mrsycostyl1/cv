@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zaid Ashiq - Cyberpunk ID</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(ellipse at top, #0f0c29, #302b63, #24243e);
+      color: #0ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      margin-top: 50px;
+      text-shadow: 0 0 15px #0ff;
+    }
+
+    h2 {
+      font-size: 1.1em;
+      color: #ccc;
+      padding: 0 20px;
+      max-width: 800px;
+      text-shadow: 0 0 8px #0ff5;
+    }
+
+    .btn {
+      background: transparent;
+      border: 2px solid #0ff;
+      padding: 15px 30px;
+      margin: 15px;
+      color: #0ff;
+      font-size: 1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .btn:hover {
+      background-color: #0ff;
+      color: #000;
+      box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
+    }
+
+    .section {
+      display: none;
+      margin-top: 30px;
+      width: 90%;
+      max-width: 850px;
+      background: rgba(0, 255, 255, 0.07);
+      padding: 20px;
+      border: 2px solid #0ff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #0ff6;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .docs img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .docs img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .info p {
+      line-height: 1.6;
+      margin: 8px 0;
+      font-size: 1.1em;
+    }
+
+    .info a {
+      display: inline-block;
+      margin: 10px 5px;
+      color: #0ff;
+      border: 1px solid #0ff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .info a:hover {
+      background: #0ff;
+      color: #000;
+    }
+
+    .footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+      text-shadow: 0 0 4px #0ff2;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main" class="main-content">
+    <h1>Created By Zaid Ashiq</h1>
+    <h2>this page could be used to verify my personal documents and my designing proficiency</h2>
+
+    <button class="btn" onclick="showSection('copies')">Documents Copies</button>
+    <button class="btn" onclick="showSection('text')">Documents Text</button>
+  </div>
+
+  <div id="copies" class="section docs">
+    <img src="https://via.placeholder.com/300x200?text=CNIC" alt="CNIC" onclick="openImage(this.src)">
+    <img src="https://via.placeholder.com/300x200?text=Matric" alt="Matric" onclick="openImage(this.src)">
+    <img src="https://via.placeholder.com/300x200?text=Inter" alt="Inter" onclick="openImage(this.src)">
+    <img src="https://via.placeholder.com/300x200?text=Domicile" alt="Domicile" onclick="openImage(this.src)">
+    <img src="https://via.placeholder.com/300x200?text=Picture" alt="Picture" onclick="openImage(this.src)">
+    <button class="btn" onclick="goHome()">Back</button>
+  </div>
+
+  <div id="text" class="section info">
+    <p><strong>Name:</strong> ZAHID HUSSAIN</p>
+    <p><strong>Father:</strong> Muhammad Ashiq</p>
+    <p><strong>CNIC:</strong> 3110254468527</p>
+    <p><strong>Education:</strong> INTERMEDIATE</p>
+    <p><strong>Address:</strong> Chaa Bootewala Shaili Gharbi Tehsil Chishtian District Bahawalnagar</p>
+
+    <a href="tel:03299931199">📞 Call</a>
+    <a href="https://wa.me/254114935564?text=we%20are%20from%20your%20cv.%20we%20are%20requesting%20to%20tell%20us%20👇%0A%E2%98%85" target="_blank">💬 WhatsApp</a>
+    <button class="btn" onclick="goHome()">Back</button>
+  </div>
+
+  <div class="footer">Thanks</div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('main').style.display = 'none';
+      document.getElementById('copies').style.display = 'none';
+      document.getElementById('text').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function goHome() {
+      document.getElementById('main').style.display = 'flex';
+      document.getElementById('copies').style.display = 'none';
+      document.getElementById('text').style.display = 'none';
+    }
+
+    function openImage(src) {
+      window.open(src, '_blank');
+    }
+  </script>
+
+</body>
+</html>
